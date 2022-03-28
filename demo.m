@@ -6,11 +6,11 @@
 clear, close all
 addpath([pwd, filesep, 'functions'])
 
-%% load data and priors
+%% 1. load data and priors
 load('exampleData')
 artifactPriors = load('priors');
 
-%% parameters
+%% 2. set parameters
 % to account for shim effects and field drift
 shimUncertaintyHz = 250;
 shimUncertaintyPpm = freq2ppm(shimUncertaintyHz, params.freqRef) - freq2ppm(0, params.freqRef);
@@ -21,18 +21,12 @@ pCorr1Uncertainty = 20*10^-5*(specAxisHz(2) - specAxisHz(1))/(specAxisPpm(2) - s
 % width of display beyond the fitted peaks
 dispBorder = 25;
 
-%% figure defaults
-set(0,'DefaultAxesFontSize', 20)
-set(0,'defaultLineMarkerSize', 6)
-set(0,'defaultLineLineWidth', 2)
-set(0,'defaultAxesLineWidth', 2)
-
-%% prepare data structure
+%% 3. prepare data structure
 spectrum.phaseCorrArtifact = spectrum.raw;
 spectrum.removedArtifact = spectrum.raw;
 spectrum.final = spectrum.raw;
 
-%% subtract backgound and estimate noise
+%% 4. subtract backgound and estimate noise
 background = false(size(specAxisPpm));
 background([1:params.borderWidth, (end - params.borderWidth+1):end]) = true;
 
@@ -43,7 +37,7 @@ zeroFillFactor = params.FFTlength/params.nAcqPoints_shortened;
 sigma = mean(std([real(spectrum.removedBaseline(background)); imag(spectrum.removedBaseline(background))]));
 sigma = zeroFillFactor*sigma;
 
-%% find signal peak and phase starting values
+%% 5. find signal peak and phase starting values
 % reevalutate section (ctrl + enter) to set parameters
 peakPriorMu.center = -58.5;
 peakPriorMu.fwhm = 3;
@@ -51,7 +45,7 @@ phaseStartingValues = [180, 0, 180];         % in degrees
 
 plotSignalPeakEstimate(specAxisPpm, spectrum.removedBaseline, peakPriorMu.center , peakPriorMu.fwhm, artifactPriors.mu.centers(:))
 
-%% prepare additional prior values
+%% 6. prepare additional prior values
 peakPriorMu.mixing = 0.8;
 
 % The fit function prepares the possibility to integrate prior knowledge on 
@@ -66,19 +60,19 @@ peakPriorSigma.mixing = 10^6;
 % drift effects
 artifactPriors.sigma.centers = sqrt(artifactPriors.sigma.centers.^2 + shimUncertaintyPpm.^2);
 
-%% do fit
+%% 7. do fit
 [fit, fittedLine, startingLine, artifact] =...
             fitPeakAndCoupledArtifacts(specAxisPpm, spectrum.removedBaseline, peakPriorMu, peakPriorSigma,...
                                             artifactPriors.mu, artifactPriors.sigma, pCorr1Uncertainty,...
                                              phaseStartingValues, sigma);
 
-%% compute cleaned spectrum and do phase correction                                         
+%% 8. compute cleaned spectrum and do phase correction                                         
 spectrum.cleaned = spectrum.removedBaseline - artifact;
 [spectrum.final, peakCenter, fwhm, finalLine] =...
         automaticPhaseCorrection_voigt(specAxisPpm, spectrum.cleaned(:, 1), fit(4), fit(7));
 
     
-%% plot fit
+%% 9. plot fit
 allCenters = [peakPriorMu.center, artifactPriors.mu.centers];
 zoomRange = [min(allCenters) - dispBorder, max(allCenters) + dispBorder];
 
