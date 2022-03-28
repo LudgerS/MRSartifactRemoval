@@ -10,6 +10,7 @@ The provided code is licensed under GNU GPLv3.
 You can directly cite this repository as
 
 If you do so, please also cite  
-  L. Starke et al.  
-  "Detection of Siponimod using Fluorine-19 Magnetic Resonance Imaging"  
-  submitted to Theranostics (2022).  
+
+    L. Starke et al.  
+    "Detection of Siponimod using Fluorine-19 Magnetic Resonance Imaging"  
+    submitted to Theranostics (2022).  
