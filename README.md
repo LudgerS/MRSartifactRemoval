@@ -5,7 +5,7 @@ Please read MRS-Artifact-Removal-Bayesian-Fitting.pdf (main folder) for more det
 
 The provided code is licensed under GNU GPLv3.
 
-If you use this software or material from the documentation, please cite this repository according to the information in the citation file our the output of the citation prompt. Please also cite  
+If you use this software or material from the documentation, please cite the repository according to the information in the citation file our the output of the citation prompt. Please also cite  
 
     L. Starke et al.  
     "Detection of Siponimod using Fluorine-19 Magnetic Resonance Imaging"  
