@@ -1,12 +1,12 @@
 cff-version: 0.8.0
 message: "If you use this software, please cite it as below. Please also cite
-Starke, L. et al. (2022). Detection of Siponimod using Fluorine-19 Magnetic Resonance Imaging. submitted to Theranostics"
+Starke, L. et al. (2022). First Fluorine-19 Magnetic Resonance Images of the Disease Modifying Drug Siponimod. submitted to Theranostics"
 authors:
 - family-names: "Starke"
   given-names: "Ludger"
   orcid: "0000-0002-0359-0101"
 title: "MRS Artifact Removal by Bayesian Fitting of Complex Voigt Line Shapes"
-version: 0.8.0
+version: 1.0.0
 doi: 10.5281/zenodo.1234
 date-released: 2022-03-29
 url: "https://github.com/LudgerS/MRSartifactRemoval"
