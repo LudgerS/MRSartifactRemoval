@@ -1,3 +1,5 @@
+% part of https://github.com/LudgerS/MRSartifactRemoval  
+%
 function line = complexVoigtWithPhase(specAxis, area, center, fwhm, mixingRatio, phase, pCorr1)
 line = area*exp(-1i*phase*pi/180)*complexVoigt(specAxis, center, fwhm, mixingRatio);
 

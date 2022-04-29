@@ -1,7 +1,25 @@
-% 1. correct phase for artifact manually
-% 2. fit real artifact signal
-% 3. remove complex artifact signal
-% 4. correct phase for true signal automatically
+%% demo.m
+%
+% part of https://github.com/LudgerS/MRSartifactRemoval  
+%
+% Demonstration script calling the artifact subtraction and phase 
+% estimation functionality of
+%   fitPeakAndCoupledArtifacts.m
+% and
+%   automaticPhaseCorrection_voigt.m
+%
+% To run the script, ensure that both exampleData.mat, priors.mat and the
+% 'functions' folder are on the search path. This should automatically be 
+% the case if the repository is simply downloaded and the scripts location
+% is made the curent folder.
+% 
+% Please see readme and MRSartifactRemoval.pdf for details on the provided
+% functionality and its application.
+%
+% Written by Ludger Starke; Max Delbrück Center for Molecular Medicine in
+% the Helmholtz Association, Berlin; 22-04-29
+%
+% License: GNU GPLv3 
 
 clear, close all
 addpath([pwd, filesep, 'functions'])

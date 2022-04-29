@@ -1,3 +1,6 @@
+% part of https://github.com/LudgerS/MRSartifactRemoval  
+%
+
 function plotSignalPeakEstimate(specAxisPpm, spectrum, centerEstimate, fwhmEstimate, artifactCenters)
 close all
 

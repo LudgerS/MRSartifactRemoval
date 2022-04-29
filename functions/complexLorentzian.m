@@ -1,6 +1,9 @@
-function lineShape = complexLorentzian(frequencyAxis, f0, fwhm)
+% part of https://github.com/LudgerS/MRSartifactRemoval  
+%
 % Normalized Absorption and Dispersion mode Lorentzian curve
 % From Keeler "Understanding NMR Spectroscopy", 9.1.4
+
+function lineShape = complexLorentzian(frequencyAxis, f0, fwhm)
 
 T2 = 2/fwhm;
 absorption = T2./(1 + (frequencyAxis - f0).^2*T2^2);

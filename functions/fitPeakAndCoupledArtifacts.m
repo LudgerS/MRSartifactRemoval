@@ -1,3 +1,33 @@
+%% fitPeakAndCoupledArtifacts.m
+%
+% part of https://github.com/LudgerS/MRSartifactRemoval  
+%
+% Fits the sum of three complex Voigt peaks to spectrum of which two are
+% coupled regarding their amplitude.
+% Bayesian priors are placed on the peak locations, widths, Voigt mixing
+% ratios, the ratio between the coupled peaks, and the 1st order phase 
+% correction.
+% 
+% Where applicable input variables should use matching units:
+%   specAxis - the frequency domain x-axis
+%   spectrum - the frequency domain data
+%   peakPriorMu - prior mean values for the signal peak
+%   peakPriorSigma - prior standard deviations for the signal peak
+%   artifactPriorsMu - prior mean values for the coupled artifact peaks
+%   artifactPriorsSigma - prior standard deviations for the coupled artifact peaks
+%   pCorr1Sigma - standard deviation 1st order phase correction
+%   startingPhase - 0th order phase correction starting values for each peak
+%   dataSigma - noise standard deviation
+%
+%
+% Please see the readme and MRSartifactRemoval.pdf for details on the 
+% provided functionality and its application.
+%
+% Written by Ludger Starke; Max Delbrück Center for Molecular Medicine in
+% the Helmholtz Association, Berlin; 22-04-29
+%
+% License: GNU GPLv3 
+
 function [fit, fittedLine, startingLine, artifact] = fitPeakAndCoupledArtifacts(specAxis, spectrum, peakPriorMu, peakPriorSigma,...
                                                                         artifactPriorsMu, artifactPriorsSigma, pCorr1Sigma,...
                                                                         startingPhase, dataSigma)

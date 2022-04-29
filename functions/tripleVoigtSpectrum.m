@@ -1,3 +1,6 @@
+% part of https://github.com/LudgerS/MRSartifactRemoval  
+%
+
 function line = tripleVoigtSpectrum(specAxis, areas, centers, fwhms, mixingRatios, phases, pCorr1)
 % add three complex voigt lines
 line = complex(zeros(size(specAxis)));

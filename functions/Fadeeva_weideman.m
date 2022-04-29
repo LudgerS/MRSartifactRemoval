@@ -1,4 +1,5 @@
-function w = Fadeeva_weideman(z, N)
+% part of https://github.com/LudgerS/MRSartifactRemoval  
+%
 % modified from A. Weideman's code
 % http://appliedmaths.sun.ac.za/~weideman/research/cef.html
 % which is based on J.A.C. Weideman, "Computation of the Complex Error 
@@ -7,6 +8,8 @@ function w = Fadeeva_weideman(z, N)
 % computes w(z) = exp(-z^2)*erfc(-iz) = exp(-z^2)*(1 - erf(-iz))
 % works for complex z but imag(z) must be >= 0
 % no corresponding assertion to improve computation speed
+
+function w = Fadeeva_weideman(z, N)
 
 M = 2*N;  
 M2 = 2*M;                                           % M2 = no. of sampling points

@@ -1,3 +1,21 @@
+%% automaticPhaseCorrection_voigt.m
+%
+% part of https://github.com/LudgerS/MRSartifactRemoval  
+%
+% Fits complex Voigt peaks to the spectrum starting from multiple different 
+% phase values. The best fitting peak's phase is used to correct the data.
+%
+% All input variables should use the same units:
+%   specAxis - the frequency domain x-axis
+%   spectrum - the frequency domain data
+%   peakCenterEstimate - starting value for the peak's center frequency
+%   fwhmEstimate - starting value for the peak's FWHM
+%
+% Written by Ludger Starke; Max Delbrück Center for Molecular Medicine in
+% the Helmholtz Association, Berlin; 22-04-29
+%
+% License: GNU GPLv3 
+
 function [spectrum, peakCenter, fwhm, finalLine] = automaticPhaseCorrection_voigt(specAxis, spectrum, peakCenterEstimate, fwhmEstimate)
 % automatic 0th-order phase correction for a single peak
 % fits a complex lorentzian to find the phase correction value

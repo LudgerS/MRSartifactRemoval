@@ -1,5 +1,7 @@
+% part of https://github.com/LudgerS/MRSartifactRemoval  
+
 function line = doubleVoigtSpectrum(specAxis, areas, centers, fwhms, mixingRatios, phases, pCorr1)
-% add three complex voigt lines
+% add two complex voigt lines
 line = complex(zeros(size(specAxis)));
 for ii = 1:2
     line = line + areas(ii)*exp(-1i*phases(ii)*pi/180)*...

@@ -1,3 +1,7 @@
+% part of https://github.com/LudgerS/MRSartifactRemoval  
+%
+% Generates the figure shown in MRSartifactRemoval.pdf
+
 function plotFitAndPhaseCorrection(specAxis, spectrumOrignal, spectrumFinal, startingLine, fittedLine, displayRange, fileName)
 % default font sizes and line width
 displayScaling = 2;

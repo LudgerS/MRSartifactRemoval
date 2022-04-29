@@ -1,3 +1,7 @@
+% part of https://github.com/LudgerS/MRSartifactRemoval  
+%
+% allows addressing the build-in standard Matlab colors
+
 function color = matlabColors(number)
 
 switch number

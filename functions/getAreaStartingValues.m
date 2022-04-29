@@ -1,3 +1,5 @@
+% part of https://github.com/LudgerS/MRSartifactRemoval  
+
 function areas0 = getAreaStartingValues(spectrum, frequencyAxis, centers0, FWHMs0)
 
 freqResolution = frequencyAxis(2) - frequencyAxis(1);
@@ -12,8 +14,10 @@ for ii = 1:numel(centers0)
 
 end
 
-% % lorentz area inside -FWHM to FWHM is 
-% % (atan(2) - atan(-2))/pi * the full area
+% The following correction is omitted as this function is normally applied
+% to magnitude data:
+% Lorentz area inside -FWHM to FWHM is 
+% (atan(2) - atan(-2))/pi * the full area
 % areas0 = areas0/(atan(2) - atan(-2))*pi;
 
 
