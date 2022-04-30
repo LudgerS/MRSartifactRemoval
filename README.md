@@ -11,3 +11,5 @@ If you use this software or material from the documentation, please cite the rep
     L. Starke et al.  
     "First Fluorine-19 Magnetic Resonance Images of the Disease Modifying Drug Siponimod"  
     submitted to Theranostics (2022).  
+
+[![DOI](https://zenodo.org/badge/475057375.svg)](https://zenodo.org/badge/latestdoi/475057375)
