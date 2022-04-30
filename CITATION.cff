@@ -7,6 +7,6 @@ authors:
   orcid: "0000-0002-0359-0101"
 title: "MRS Artifact Removal by Bayesian Fitting of Complex Voigt Line Shapes"
 version: 1.0.0
-doi: 10.5281/zenodo.1234
-date-released: 2022-03-29
+doi: 10.5281/zenodo.6507817
+date-released: 2022-04-30
 url: "https://github.com/LudgerS/MRSartifactRemoval"
