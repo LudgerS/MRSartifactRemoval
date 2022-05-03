@@ -6,7 +6,7 @@ Please read MRSartifactRemoval.pdf (main folder) for more detail.
 
 The provided code is licensed under GNU GPLv3.
 
-If you use this software or material from the documentation, please cite the repository according to the information in the citation file our the output of the citation prompt. Please also cite  
+If you use this software or material from the documentation, please cite the repository according to the information in the citation file or the output of the citation prompt. Please also cite  
 
     L. Starke et al.  
     "First Fluorine-19 Magnetic Resonance Images of the Disease Modifying Drug Siponimod"  
