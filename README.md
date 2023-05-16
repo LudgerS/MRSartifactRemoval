@@ -8,6 +8,6 @@ The provided code is licensed under GNU GPLv3.
 
 If you use this software or material from the documentation, please cite the repository according to the information in the citation file or the output of the citation prompt. Please also cite  
 
-    L. Starke et al.  
-    "First Fluorine-19 Magnetic Resonance Images of the Disease Modifying Drug Siponimod"  
-    submitted to Theranostics (2022).  
+    Starke, Ludger, et al. 
+    "First in vivo fluorine-19 magnetic resonance imaging of the multiple sclerosis drug siponimod." 
+    Theranostics 13.4 (2023): 1217. 
